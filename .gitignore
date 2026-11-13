@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Build output
+build/
+expense_tracker
+*.o
+
+# Debug symbols (macOS)
+*.dSYM/
