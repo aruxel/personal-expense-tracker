@@ -8,3 +8,4 @@ expense_tracker
 
 # Debug symbols (macOS)
 *.dSYM/
+.vscode/
