@@ -1,11 +1,12 @@
 CC = clang
-CFLAGS = -std=c23 -Wall -Wextra -Wpedantic
+CFLAGS = -std=c23 -Wall -Wextra -Wpedantic -I include
 TARGET = expense_tracker
-SRC = src/main.c
+SRC = src/main.c src/expense.c
+HEADERS = include/expense.h
 
 all: $(TARGET)
 
-$(TARGET): $(SRC)
+$(TARGET): $(SRC) $(HEADERS)
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
 run: $(TARGET)
