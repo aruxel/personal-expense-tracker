@@ -70,7 +70,7 @@ void handle_menu_choice(int choice) {
             printf("Add Expense functionality is not available yet.\n");
             break;
         case 2:
-            printf("View All Expense functionality is not available yet.\n");
+            printf("View All Expenses functionality is not available yet.\n");
             break;
         case 3:
             printf("Edit Expense functionality is not available yet.\n");
