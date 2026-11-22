@@ -2,7 +2,7 @@
 
 A command-line personal expense tracker built with C23, featuring expense management, financial summaries, search, filtering, and CSV data persistence.
 
-> **Status:** Early development. The expense data model and basic expense functions are implemented. Everything under "Planned Features" is **not implemented yet**.
+> **Status:** Early development. The expense data model, basic expense functions, and a menu interface are implemented. The menu options are placeholders, and everything under "Planned Features" is **not implemented yet**.
 
 ## Planned Features
 
@@ -76,10 +76,32 @@ make
 ```bash
 make run
 ```
-
 To remove build files:
 ```bash
 make clean
+```
+
+## Menu
+
+Running the program shows a main menu. Enter a number and press Enter.
+
+| Option | Action | Status |
+|---|---|---|
+| 1 | Add Expense | Placeholder |
+| 2 | View All Expenses | Placeholder |
+| 3 | Edit Expense | Placeholder |
+| 4 | Delete Expense | Placeholder |
+| 5 | Financial Summary | Placeholder |
+| 6 | Search Expenses | Placeholder |
+| 7 | Filter Expenses | Placeholder |
+| 0 | Exit | Working |
+
+Invalid input (letters, empty lines, extra characters, or numbers that are not menu options) shows an error message and returns to the menu. The menu code is in `src/menu.c` and `include/menu.h`.
+
+To run the menu checks (build first with `make`):
+
+```bash
+sh tests/test_menu.sh
 ```
 
 ## Development Status
@@ -88,6 +110,7 @@ make clean
 - [x] Makefile build system
 - [x] Expense data structure and category enumeration
 - [x] Basic expense creation and display
+- [x] Menu navigation (options are placeholders)
 - [ ] Expense management (add, edit, delete)
 - [ ] Summaries, search, and filtering
 - [ ] CSV persistence
