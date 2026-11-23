@@ -47,6 +47,7 @@ Input validation is **not implemented yet**, so invalid amounts and dates are cu
 ```text
 personal-expense-tracker/
 |-- src/        # Source files (.c)
+    |-- main.c
 |-- include/    # Header files (.h)
 |-- data/       # CSV data files
 |-- tests/      # Test files
