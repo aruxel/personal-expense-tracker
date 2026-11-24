@@ -26,3 +26,27 @@ void display_expense(const Expense *expense) {
     printf("Category: %s\n", expense->category);
     printf("Date: %s\n", expense->date);
 }
+void init_expense_list(ExpenseList *list) {
+    list->count = 0;
+    list->next_id = 1;
+}
+
+int add_expense(
+    ExpenseList *list,
+    const char *description,
+    double amount,
+    const char *category,
+    const char *date
+) {
+    if (list->count >= MAX_EXPENSES) {
+        return 0;
+    }
+
+    list->items[list->count] = create_expense(
+        list->next_id, description, amount, category, date
+    );
+    list->count++;
+    list->next_id++;
+
+    return 1;
+}
